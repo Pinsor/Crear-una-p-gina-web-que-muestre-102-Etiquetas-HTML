@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>102 Etiquetas HTML — Descargable</title>
+<link rel="stylesheet" href="comienzo.css">
+<style>
+/* Colores y mejoras visuales añadidas */
+body { background-color:#4CAF50; }
+#banner { background-color: #2b6777; color: #fff; padding: 15px; text-align: center; margin-bottom:12px; }
+#inventario tr:nth-child(even) { background-color: #f9f9f9; }
+#inventario tr:hover { background-color: #d6f0ff; }
+.search-bar { background: #e6e8ff2f; padding: 10px; border-radius: 6px; margin-bottom:12px; }
+.button { background: #90ee90; border: 1px solid #66bb66; padding:6px 8px; border-radius:6px; cursor:pointer; }
+.button:hover { background: #66cc66; color: white; }
+.details { background: #fff8e1; border: 1px solid #ffecb3; padding:8px; border-radius:6px; }
+.row-hidden{display:none !important;}
+.copy-btn{cursor:pointer;}
+.highlight{background:yellow;}
+pre{white-space:pre-wrap;font-family:monospace;font-size:0.9rem;margin:0;}
+.search-bar{display:flex;gap:8px;margin-bottom:12px;align-items:center;}
+input[type="search"]{flex:1;padding:8px;border:1px solid #ccc;border-radius:6px;}
+.result-count{font-size:0.9rem;color:#333;margin-left:8px;}
+#inventario { width:100%; border-collapse:collapse; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+#inventario th, #inventario td { border:1px solid black; padding:6px 8px; font-size:1.0rem; vertical-align:top; }
+#inventario th { background-image: url(bg_th.png); background-repeat:no-repeat; background-position:left top; color:white; font-family: 'Times New Roman', Times, serif; text-transform:uppercase; }
+@media(max-width:900px){ table, thead, tbody, th, td, tr{display:block;} th{display:none;} td{border:none;border-bottom:1px solid #eee;padding:10px 6px;} }
+</style>
+</head>
+<body>
+<div id="banner"><h1>102 Etiquetas HTML</h1></div>
+<div class="search-bar" role="search" aria-label="Buscar etiquetas">
+  <input id="searchInput" type="search" placeholder="Buscar etiqueta por nombre o descripción (ej: img, enlace, form)">
+  <button id="clearBtn" class="button">Limpiar</button>
+  <div class="result-count" id="resultCount"></div>
+</div>
+<div id="meaningPanel" aria-live="polite" style="margin-bottom:10px;"></div>
+<table id="inventario" aria-describedby="resultCount">
+<thead><tr><th style="width:4%">#</th><th style="width:12%">Etiqueta</th><th style="width:34%">Descripción</th><th style="width:30%">Ejemplo de Uso</th><th style="width:20%">Elemento Adicional</th></tr></thead>
+<tbody>
+<tr data-tag='a'><td>1</td><td class='tag-name'>&lt;a&gt;</td><td class='tag-desc'>Define un hipervínculo (enlace) hacia otra página o recurso.</td><td><pre id='example-1'>&lt;a href=&quot;https://www.ejemplo.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Visita Ejemplo&lt;/a&gt;</pre><button class='button copy-btn' data-ex='example-1'>Copiar ejemplo</button></td><td>Atributos: href, target, rel. Use rel=&#x27;noopener&#x27; al abrir en nueva pestaña.</td></tr>
+<tr data-tag='abbr'><td>2</td><td class='tag-name'>&lt;abbr&gt;</td><td class='tag-desc'>Elemento &lt;abbr&gt;: uso y propósito común.</td><td><pre id='example-2'>&lt;abbr&gt;Contenido de ejemplo&lt;/abbr&gt;</pre><button class='button copy-btn' data-ex='example-2'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='address'><td>3</td><td class='tag-name'>&lt;address&gt;</td><td class='tag-desc'>Elemento &lt;address&gt;: uso y propósito común.</td><td><pre id='example-3'>&lt;address&gt;Contenido de ejemplo&lt;/address&gt;</pre><button class='button copy-btn' data-ex='example-3'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='area'><td>4</td><td class='tag-name'>&lt;area&gt;</td><td class='tag-desc'>Elemento HTML vacío/void &lt;area&gt; (no requiere etiqueta de cierre).</td><td><pre id='example-4'>&lt;area /&gt;</pre><button class='button copy-btn' data-ex='example-4'>Copiar ejemplo</button></td><td>Elemento void. Ver atributos específicos.</td></tr>
+<tr data-tag='article'><td>5</td><td class='tag-name'>&lt;article&gt;</td><td class='tag-desc'>Elemento &lt;article&gt;: uso y propósito común.</td><td><pre id='example-5'>&lt;article&gt;Contenido de ejemplo&lt;/article&gt;</pre><button class='button copy-btn' data-ex='example-5'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='aside'><td>6</td><td class='tag-name'>&lt;aside&gt;</td><td class='tag-desc'>Elemento &lt;aside&gt;: uso y propósito común.</td><td><pre id='example-6'>&lt;aside&gt;Contenido de ejemplo&lt;/aside&gt;</pre><button class='button copy-btn' data-ex='example-6'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='audio'><td>7</td><td class='tag-name'>&lt;audio&gt;</td><td class='tag-desc'>Elemento &lt;audio&gt;: uso y propósito común.</td><td><pre id='example-7'>&lt;audio&gt;Contenido de ejemplo&lt;/audio&gt;</pre><button class='button copy-btn' data-ex='example-7'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='b'><td>8</td><td class='tag-name'>&lt;b&gt;</td><td class='tag-desc'>Elemento &lt;b&gt;: uso y propósito común.</td><td><pre id='example-8'>&lt;b&gt;Contenido de ejemplo&lt;/b&gt;</pre><button class='button copy-btn' data-ex='example-8'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='base'><td>9</td><td class='tag-name'>&lt;base&gt;</td><td class='tag-desc'>Elemento HTML vacío/void &lt;base&gt; (no requiere etiqueta de cierre).</td><td><pre id='example-9'>&lt;base /&gt;</pre><button class='button copy-btn' data-ex='example-9'>Copiar ejemplo</button></td><td>Elemento void. Ver atributos específicos.</td></tr>
+<tr data-tag='bdi'><td>10</td><td class='tag-name'>&lt;bdi&gt;</td><td class='tag-desc'>Elemento &lt;bdi&gt;: uso y propósito común.</td><td><pre id='example-10'>&lt;bdi&gt;Contenido de ejemplo&lt;/bdi&gt;</pre><button class='button copy-btn' data-ex='example-10'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='bdo'><td>11</td><td class='tag-name'>&lt;bdo&gt;</td><td class='tag-desc'>Elemento &lt;bdo&gt;: uso y propósito común.</td><td><pre id='example-11'>&lt;bdo&gt;Contenido de ejemplo&lt;/bdo&gt;</pre><button class='button copy-btn' data-ex='example-11'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='blockquote'><td>12</td><td class='tag-name'>&lt;blockquote&gt;</td><td class='tag-desc'>Elemento &lt;blockquote&gt;: uso y propósito común.</td><td><pre id='example-12'>&lt;blockquote&gt;Contenido de ejemplo&lt;/blockquote&gt;</pre><button class='button copy-btn' data-ex='example-12'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='body'><td>13</td><td class='tag-name'>&lt;body&gt;</td><td class='tag-desc'>Elemento &lt;body&gt;: uso y propósito común.</td><td><pre id='example-13'>&lt;body&gt;Contenido de ejemplo&lt;/body&gt;</pre><button class='button copy-btn' data-ex='example-13'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='br'><td>14</td><td class='tag-name'>&lt;br&gt;</td><td class='tag-desc'>Elemento HTML vacío/void &lt;br&gt; (no requiere etiqueta de cierre).</td><td><pre id='example-14'>&lt;br /&gt;</pre><button class='button copy-btn' data-ex='example-14'>Copiar ejemplo</button></td><td>Elemento void. Ver atributos específicos.</td></tr>
+<tr data-tag='button'><td>15</td><td class='tag-name'>&lt;button&gt;</td><td class='tag-desc'>Elemento &lt;button&gt;: uso y propósito común.</td><td><pre id='example-15'>&lt;button&gt;Contenido de ejemplo&lt;/button&gt;</pre><button class='button copy-btn' data-ex='example-15'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='canvas'><td>16</td><td class='tag-name'>&lt;canvas&gt;</td><td class='tag-desc'>Elemento &lt;canvas&gt;: uso y propósito común.</td><td><pre id='example-16'>&lt;canvas&gt;Contenido de ejemplo&lt;/canvas&gt;</pre><button class='button copy-btn' data-ex='example-16'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='caption'><td>17</td><td class='tag-name'>&lt;caption&gt;</td><td class='tag-desc'>Elemento &lt;caption&gt;: uso y propósito común.</td><td><pre id='example-17'>&lt;caption&gt;Contenido de ejemplo&lt;/caption&gt;</pre><button class='button copy-btn' data-ex='example-17'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='cite'><td>18</td><td class='tag-name'>&lt;cite&gt;</td><td class='tag-desc'>Elemento &lt;cite&gt;: uso y propósito común.</td><td><pre id='example-18'>&lt;cite&gt;Contenido de ejemplo&lt;/cite&gt;</pre><button class='button copy-btn' data-ex='example-18'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='code'><td>19</td><td class='tag-name'>&lt;code&gt;</td><td class='tag-desc'>Elemento &lt;code&gt;: uso y propósito común.</td><td><pre id='example-19'>&lt;code&gt;Contenido de ejemplo&lt;/code&gt;</pre><button class='button copy-btn' data-ex='example-19'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='col'><td>20</td><td class='tag-name'>&lt;col&gt;</td><td class='tag-desc'>Elemento HTML vacío/void &lt;col&gt; (no requiere etiqueta de cierre).</td><td><pre id='example-20'>&lt;col /&gt;</pre><button class='button copy-btn' data-ex='example-20'>Copiar ejemplo</button></td><td>Elemento void. Ver atributos específicos.</td></tr>
+<tr data-tag='colgroup'><td>21</td><td class='tag-name'>&lt;colgroup&gt;</td><td class='tag-desc'>Elemento &lt;colgroup&gt;: uso y propósito común.</td><td><pre id='example-21'>&lt;colgroup&gt;Contenido de ejemplo&lt;/colgroup&gt;</pre><button class='button copy-btn' data-ex='example-21'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='data'><td>22</td><td class='tag-name'>&lt;data&gt;</td><td class='tag-desc'>Elemento &lt;data&gt;: uso y propósito común.</td><td><pre id='example-22'>&lt;data&gt;Contenido de ejemplo&lt;/data&gt;</pre><button class='button copy-btn' data-ex='example-22'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='datalist'><td>23</td><td class='tag-name'>&lt;datalist&gt;</td><td class='tag-desc'>Elemento &lt;datalist&gt;: uso y propósito común.</td><td><pre id='example-23'>&lt;datalist&gt;Contenido de ejemplo&lt;/datalist&gt;</pre><button class='button copy-btn' data-ex='example-23'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='dd'><td>24</td><td class='tag-name'>&lt;dd&gt;</td><td class='tag-desc'>Elemento &lt;dd&gt;: uso y propósito común.</td><td><pre id='example-24'>&lt;dd&gt;Contenido de ejemplo&lt;/dd&gt;</pre><button class='button copy-btn' data-ex='example-24'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='del'><td>25</td><td class='tag-name'>&lt;del&gt;</td><td class='tag-desc'>Elemento &lt;del&gt;: uso y propósito común.</td><td><pre id='example-25'>&lt;del&gt;Contenido de ejemplo&lt;/del&gt;</pre><button class='button copy-btn' data-ex='example-25'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='details'><td>26</td><td class='tag-name'>&lt;details&gt;</td><td class='tag-desc'>Elemento &lt;details&gt;: uso y propósito común.</td><td><pre id='example-26'>&lt;details&gt;Contenido de ejemplo&lt;/details&gt;</pre><button class='button copy-btn' data-ex='example-26'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='dfn'><td>27</td><td class='tag-name'>&lt;dfn&gt;</td><td class='tag-desc'>Elemento &lt;dfn&gt;: uso y propósito común.</td><td><pre id='example-27'>&lt;dfn&gt;Contenido de ejemplo&lt;/dfn&gt;</pre><button class='button copy-btn' data-ex='example-27'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='dialog'><td>28</td><td class='tag-name'>&lt;dialog&gt;</td><td class='tag-desc'>Elemento &lt;dialog&gt;: uso y propósito común.</td><td><pre id='example-28'>&lt;dialog&gt;Contenido de ejemplo&lt;/dialog&gt;</pre><button class='button copy-btn' data-ex='example-28'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='div'><td>29</td><td class='tag-name'>&lt;div&gt;</td><td class='tag-desc'>Elemento &lt;div&gt;: uso y propósito común.</td><td><pre id='example-29'>&lt;div&gt;Contenido de ejemplo&lt;/div&gt;</pre><button class='button copy-btn' data-ex='example-29'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='dl'><td>30</td><td class='tag-name'>&lt;dl&gt;</td><td class='tag-desc'>Elemento &lt;dl&gt;: uso y propósito común.</td><td><pre id='example-30'>&lt;dl&gt;Contenido de ejemplo&lt;/dl&gt;</pre><button class='button copy-btn' data-ex='example-30'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='dt'><td>31</td><td class='tag-name'>&lt;dt&gt;</td><td class='tag-desc'>Elemento &lt;dt&gt;: uso y propósito común.</td><td><pre id='example-31'>&lt;dt&gt;Contenido de ejemplo&lt;/dt&gt;</pre><button class='button copy-btn' data-ex='example-31'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='em'><td>32</td><td class='tag-name'>&lt;em&gt;</td><td class='tag-desc'>Elemento &lt;em&gt;: uso y propósito común.</td><td><pre id='example-32'>&lt;em&gt;Contenido de ejemplo&lt;/em&gt;</pre><button class='button copy-btn' data-ex='example-32'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='embed'><td>33</td><td class='tag-name'>&lt;embed&gt;</td><td class='tag-desc'>Elemento HTML vacío/void &lt;embed&gt; (no requiere etiqueta de cierre).</td><td><pre id='example-33'>&lt;embed /&gt;</pre><button class='button copy-btn' data-ex='example-33'>Copiar ejemplo</button></td><td>Elemento void. Ver atributos específicos.</td></tr>
+<tr data-tag='fieldset'><td>34</td><td class='tag-name'>&lt;fieldset&gt;</td><td class='tag-desc'>Elemento &lt;fieldset&gt;: uso y propósito común.</td><td><pre id='example-34'>&lt;fieldset&gt;Contenido de ejemplo&lt;/fieldset&gt;</pre><button class='button copy-btn' data-ex='example-34'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='figcaption'><td>35</td><td class='tag-name'>&lt;figcaption&gt;</td><td class='tag-desc'>Elemento &lt;figcaption&gt;: uso y propósito común.</td><td><pre id='example-35'>&lt;figcaption&gt;Contenido de ejemplo&lt;/figcaption&gt;</pre><button class='button copy-btn' data-ex='example-35'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='figure'><td>36</td><td class='tag-name'>&lt;figure&gt;</td><td class='tag-desc'>Elemento &lt;figure&gt;: uso y propósito común.</td><td><pre id='example-36'>&lt;figure&gt;Contenido de ejemplo&lt;/figure&gt;</pre><button class='button copy-btn' data-ex='example-36'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='footer'><td>37</td><td class='tag-name'>&lt;footer&gt;</td><td class='tag-desc'>Elemento &lt;footer&gt;: uso y propósito común.</td><td><pre id='example-37'>&lt;footer&gt;Contenido de ejemplo&lt;/footer&gt;</pre><button class='button copy-btn' data-ex='example-37'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='form'><td>38</td><td class='tag-name'>&lt;form&gt;</td><td class='tag-desc'>Formulario para enviar datos al servidor.</td><td><pre id='example-38'>&lt;form action=&quot;/enviar&quot; method=&quot;post&quot;&gt;&lt;input name=&quot;nombre&quot; /&gt;&lt;/form&gt;</pre><button class='button copy-btn' data-ex='example-38'>Copiar ejemplo</button></td><td>Atributos: action, method. Incluir CSRF token en aplicaciones reales.</td></tr>
+<tr data-tag='h1'><td>39</td><td class='tag-name'>&lt;h1&gt;</td><td class='tag-desc'>Encabezado de nivel 1. Usado para títulos y estructura del documento.</td><td><pre id='example-39'>&lt;h1&gt;Encabezado nivel 1&lt;/h1&gt;</pre><button class='button copy-btn' data-ex='example-39'>Copiar ejemplo</button></td><td>Encabezados van de &lt;h1&gt; (más importante) a &lt;h6&gt; (menos importante).</td></tr>
+<tr data-tag='h2'><td>40</td><td class='tag-name'>&lt;h2&gt;</td><td class='tag-desc'>Encabezado de nivel 2. Usado para títulos y estructura del documento.</td><td><pre id='example-40'>&lt;h2&gt;Encabezado nivel 2&lt;/h2&gt;</pre><button class='button copy-btn' data-ex='example-40'>Copiar ejemplo</button></td><td>Encabezados van de &lt;h1&gt; (más importante) a &lt;h6&gt; (menos importante).</td></tr>
+<tr data-tag='h3'><td>41</td><td class='tag-name'>&lt;h3&gt;</td><td class='tag-desc'>Encabezado de nivel 3. Usado para títulos y estructura del documento.</td><td><pre id='example-41'>&lt;h3&gt;Encabezado nivel 3&lt;/h3&gt;</pre><button class='button copy-btn' data-ex='example-41'>Copiar ejemplo</button></td><td>Encabezados van de &lt;h1&gt; (más importante) a &lt;h6&gt; (menos importante).</td></tr>
+<tr data-tag='h4'><td>42</td><td class='tag-name'>&lt;h4&gt;</td><td class='tag-desc'>Encabezado de nivel 4. Usado para títulos y estructura del documento.</td><td><pre id='example-42'>&lt;h4&gt;Encabezado nivel 4&lt;/h4&gt;</pre><button class='button copy-btn' data-ex='example-42'>Copiar ejemplo</button></td><td>Encabezados van de &lt;h1&gt; (más importante) a &lt;h6&gt; (menos importante).</td></tr>
+<tr data-tag='h5'><td>43</td><td class='tag-name'>&lt;h5&gt;</td><td class='tag-desc'>Encabezado de nivel 5. Usado para títulos y estructura del documento.</td><td><pre id='example-43'>&lt;h5&gt;Encabezado nivel 5&lt;/h5&gt;</pre><button class='button copy-btn' data-ex='example-43'>Copiar ejemplo</button></td><td>Encabezados van de &lt;h1&gt; (más importante) a &lt;h6&gt; (menos importante).</td></tr>
+<tr data-tag='h6'><td>44</td><td class='tag-name'>&lt;h6&gt;</td><td class='tag-desc'>Encabezado de nivel 6. Usado para títulos y estructura del documento.</td><td><pre id='example-44'>&lt;h6&gt;Encabezado nivel 6&lt;/h6&gt;</pre><button class='button copy-btn' data-ex='example-44'>Copiar ejemplo</button></td><td>Encabezados van de &lt;h1&gt; (más importante) a &lt;h6&gt; (menos importante).</td></tr>
+<tr data-tag='head'><td>45</td><td class='tag-name'>&lt;head&gt;</td><td class='tag-desc'>Elemento &lt;head&gt;: uso y propósito común.</td><td><pre id='example-45'>&lt;head&gt;Contenido de ejemplo&lt;/head&gt;</pre><button class='button copy-btn' data-ex='example-45'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='header'><td>46</td><td class='tag-name'>&lt;header&gt;</td><td class='tag-desc'>Elemento &lt;header&gt;: uso y propósito común.</td><td><pre id='example-46'>&lt;header&gt;Contenido de ejemplo&lt;/header&gt;</pre><button class='button copy-btn' data-ex='example-46'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='hr'><td>47</td><td class='tag-name'>&lt;hr&gt;</td><td class='tag-desc'>Elemento HTML vacío/void &lt;hr&gt; (no requiere etiqueta de cierre).</td><td><pre id='example-47'>&lt;hr /&gt;</pre><button class='button copy-btn' data-ex='example-47'>Copiar ejemplo</button></td><td>Elemento void. Ver atributos específicos.</td></tr>
+<tr data-tag='html'><td>48</td><td class='tag-name'>&lt;html&gt;</td><td class='tag-desc'>Elemento &lt;html&gt;: uso y propósito común.</td><td><pre id='example-48'>&lt;html&gt;Contenido de ejemplo&lt;/html&gt;</pre><button class='button copy-btn' data-ex='example-48'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='i'><td>49</td><td class='tag-name'>&lt;i&gt;</td><td class='tag-desc'>Elemento &lt;i&gt;: uso y propósito común.</td><td><pre id='example-49'>&lt;i&gt;Contenido de ejemplo&lt;/i&gt;</pre><button class='button copy-btn' data-ex='example-49'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='iframe'><td>50</td><td class='tag-name'>&lt;iframe&gt;</td><td class='tag-desc'>Elemento &lt;iframe&gt;: uso y propósito común.</td><td><pre id='example-50'>&lt;iframe&gt;Contenido de ejemplo&lt;/iframe&gt;</pre><button class='button copy-btn' data-ex='example-50'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='img'><td>51</td><td class='tag-name'>&lt;img&gt;</td><td class='tag-desc'>Incrusta una imagen en la página.</td><td><pre id='example-51'>&lt;img src=&quot;imagen.jpg&quot; alt=&quot;Descripción de la imagen&quot; /&gt;</pre><button class='button copy-btn' data-ex='example-51'>Copiar ejemplo</button></td><td>Atributos: src, alt, srcset. Incluir alt por accesibilidad. Es un elemento void.</td></tr>
+<tr data-tag='input'><td>52</td><td class='tag-name'>&lt;input&gt;</td><td class='tag-desc'>Campo de entrada de datos en formularios (texto, checkbox, radio, etc.).</td><td><pre id='example-52'>&lt;input type=&quot;text&quot; name=&quot;usuario&quot; placeholder=&quot;Tu nombre&quot; /&gt;</pre><button class='button copy-btn' data-ex='example-52'>Copiar ejemplo</button></td><td>Atributos: type, name, value, placeholder.</td></tr>
+<tr data-tag='ins'><td>53</td><td class='tag-name'>&lt;ins&gt;</td><td class='tag-desc'>Elemento &lt;ins&gt;: uso y propósito común.</td><td><pre id='example-53'>&lt;ins&gt;Contenido de ejemplo&lt;/ins&gt;</pre><button class='button copy-btn' data-ex='example-53'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='kbd'><td>54</td><td class='tag-name'>&lt;kbd&gt;</td><td class='tag-desc'>Elemento &lt;kbd&gt;: uso y propósito común.</td><td><pre id='example-54'>&lt;kbd&gt;Contenido de ejemplo&lt;/kbd&gt;</pre><button class='button copy-btn' data-ex='example-54'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='label'><td>55</td><td class='tag-name'>&lt;label&gt;</td><td class='tag-desc'>Elemento &lt;label&gt;: uso y propósito común.</td><td><pre id='example-55'>&lt;label&gt;Contenido de ejemplo&lt;/label&gt;</pre><button class='button copy-btn' data-ex='example-55'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='legend'><td>56</td><td class='tag-name'>&lt;legend&gt;</td><td class='tag-desc'>Elemento &lt;legend&gt;: uso y propósito común.</td><td><pre id='example-56'>&lt;legend&gt;Contenido de ejemplo&lt;/legend&gt;</pre><button class='button copy-btn' data-ex='example-56'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='li'><td>57</td><td class='tag-name'>&lt;li&gt;</td><td class='tag-desc'>Elemento &lt;li&gt;: uso y propósito común.</td><td><pre id='example-57'>&lt;li&gt;Contenido de ejemplo&lt;/li&gt;</pre><button class='button copy-btn' data-ex='example-57'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='link'><td>58</td><td class='tag-name'>&lt;link&gt;</td><td class='tag-desc'>Enlaza recursos externos (p. ej. hojas de estilo CSS).</td><td><pre id='example-58'>&lt;link rel=&quot;stylesheet&quot; href=&quot;comienzo.css&quot; /&gt;</pre><button class='button copy-btn' data-ex='example-58'>Copiar ejemplo</button></td><td>Usado en &lt;head&gt;. Atributos: rel, href.</td></tr>
+<tr data-tag='main'><td>59</td><td class='tag-name'>&lt;main&gt;</td><td class='tag-desc'>Elemento &lt;main&gt;: uso y propósito común.</td><td><pre id='example-59'>&lt;main&gt;Contenido de ejemplo&lt;/main&gt;</pre><button class='button copy-btn' data-ex='example-59'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='map'><td>60</td><td class='tag-name'>&lt;map&gt;</td><td class='tag-desc'>Elemento &lt;map&gt;: uso y propósito común.</td><td><pre id='example-60'>&lt;map&gt;Contenido de ejemplo&lt;/map&gt;</pre><button class='button copy-btn' data-ex='example-60'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='mark'><td>61</td><td class='tag-name'>&lt;mark&gt;</td><td class='tag-desc'>Elemento &lt;mark&gt;: uso y propósito común.</td><td><pre id='example-61'>&lt;mark&gt;Contenido de ejemplo&lt;/mark&gt;</pre><button class='button copy-btn' data-ex='example-61'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='meta'><td>62</td><td class='tag-name'>&lt;meta&gt;</td><td class='tag-desc'>Metadatos del documento (codificación, viewport, descripción).</td><td><pre id='example-62'>&lt;meta charset=&quot;utf-8&quot; /&gt;</pre><button class='button copy-btn' data-ex='example-62'>Copiar ejemplo</button></td><td>Se coloca en el &lt;head&gt;. No tiene contenido visible.</td></tr>
+<tr data-tag='meter'><td>63</td><td class='tag-name'>&lt;meter&gt;</td><td class='tag-desc'>Elemento &lt;meter&gt;: uso y propósito común.</td><td><pre id='example-63'>&lt;meter&gt;Contenido de ejemplo&lt;/meter&gt;</pre><button class='button copy-btn' data-ex='example-63'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='nav'><td>64</td><td class='tag-name'>&lt;nav&gt;</td><td class='tag-desc'>Elemento &lt;nav&gt;: uso y propósito común.</td><td><pre id='example-64'>&lt;nav&gt;Contenido de ejemplo&lt;/nav&gt;</pre><button class='button copy-btn' data-ex='example-64'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='noscript'><td>65</td><td class='tag-name'>&lt;noscript&gt;</td><td class='tag-desc'>Elemento &lt;noscript&gt;: uso y propósito común.</td><td><pre id='example-65'>&lt;noscript&gt;Contenido de ejemplo&lt;/noscript&gt;</pre><button class='button copy-btn' data-ex='example-65'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='object'><td>66</td><td class='tag-name'>&lt;object&gt;</td><td class='tag-desc'>Elemento &lt;object&gt;: uso y propósito común.</td><td><pre id='example-66'>&lt;object&gt;Contenido de ejemplo&lt;/object&gt;</pre><button class='button copy-btn' data-ex='example-66'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='ol'><td>67</td><td class='tag-name'>&lt;ol&gt;</td><td class='tag-desc'>Elemento &lt;ol&gt;: uso y propósito común.</td><td><pre id='example-67'>&lt;ol&gt;Contenido de ejemplo&lt;/ol&gt;</pre><button class='button copy-btn' data-ex='example-67'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='optgroup'><td>68</td><td class='tag-name'>&lt;optgroup&gt;</td><td class='tag-desc'>Elemento &lt;optgroup&gt;: uso y propósito común.</td><td><pre id='example-68'>&lt;optgroup&gt;Contenido de ejemplo&lt;/optgroup&gt;</pre><button class='button copy-btn' data-ex='example-68'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='option'><td>69</td><td class='tag-name'>&lt;option&gt;</td><td class='tag-desc'>Elemento &lt;option&gt;: uso y propósito común.</td><td><pre id='example-69'>&lt;option&gt;Contenido de ejemplo&lt;/option&gt;</pre><button class='button copy-btn' data-ex='example-69'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='output'><td>70</td><td class='tag-name'>&lt;output&gt;</td><td class='tag-desc'>Elemento &lt;output&gt;: uso y propósito común.</td><td><pre id='example-70'>&lt;output&gt;Contenido de ejemplo&lt;/output&gt;</pre><button class='button copy-btn' data-ex='example-70'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='p'><td>71</td><td class='tag-name'>&lt;p&gt;</td><td class='tag-desc'>Define un párrafo de texto.</td><td><pre id='example-71'>&lt;p&gt;Este es un párrafo.&lt;/p&gt;</pre><button class='button copy-btn' data-ex='example-71'>Copiar ejemplo</button></td><td>Puede contener elementos en línea como &lt;a&gt;, &lt;strong&gt;, &lt;em&gt;.</td></tr>
+<tr data-tag='param'><td>72</td><td class='tag-name'>&lt;param&gt;</td><td class='tag-desc'>Elemento HTML vacío/void &lt;param&gt; (no requiere etiqueta de cierre).</td><td><pre id='example-72'>&lt;param /&gt;</pre><button class='button copy-btn' data-ex='example-72'>Copiar ejemplo</button></td><td>Elemento void. Ver atributos específicos.</td></tr>
+<tr data-tag='picture'><td>73</td><td class='tag-name'>&lt;picture&gt;</td><td class='tag-desc'>Elemento &lt;picture&gt;: uso y propósito común.</td><td><pre id='example-73'>&lt;picture&gt;Contenido de ejemplo&lt;/picture&gt;</pre><button class='button copy-btn' data-ex='example-73'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='pre'><td>74</td><td class='tag-name'>&lt;pre&gt;</td><td class='tag-desc'>Elemento &lt;pre&gt;: uso y propósito común.</td><td><pre id='example-74'>&lt;pre&gt;Contenido de ejemplo&lt;/pre&gt;</pre><button class='button copy-btn' data-ex='example-74'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='progress'><td>75</td><td class='tag-name'>&lt;progress&gt;</td><td class='tag-desc'>Elemento &lt;progress&gt;: uso y propósito común.</td><td><pre id='example-75'>&lt;progress&gt;Contenido de ejemplo&lt;/progress&gt;</pre><button class='button copy-btn' data-ex='example-75'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='q'><td>76</td><td class='tag-name'>&lt;q&gt;</td><td class='tag-desc'>Elemento &lt;q&gt;: uso y propósito común.</td><td><pre id='example-76'>&lt;q&gt;Contenido de ejemplo&lt;/q&gt;</pre><button class='button copy-btn' data-ex='example-76'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='rp'><td>77</td><td class='tag-name'>&lt;rp&gt;</td><td class='tag-desc'>Elemento &lt;rp&gt;: uso y propósito común.</td><td><pre id='example-77'>&lt;rp&gt;Contenido de ejemplo&lt;/rp&gt;</pre><button class='button copy-btn' data-ex='example-77'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='rt'><td>78</td><td class='tag-name'>&lt;rt&gt;</td><td class='tag-desc'>Elemento &lt;rt&gt;: uso y propósito común.</td><td><pre id='example-78'>&lt;rt&gt;Contenido de ejemplo&lt;/rt&gt;</pre><button class='button copy-btn' data-ex='example-78'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='ruby'><td>79</td><td class='tag-name'>&lt;ruby&gt;</td><td class='tag-desc'>Elemento &lt;ruby&gt;: uso y propósito común.</td><td><pre id='example-79'>&lt;ruby&gt;Contenido de ejemplo&lt;/ruby&gt;</pre><button class='button copy-btn' data-ex='example-79'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='s'><td>80</td><td class='tag-name'>&lt;s&gt;</td><td class='tag-desc'>Elemento &lt;s&gt;: uso y propósito común.</td><td><pre id='example-80'>&lt;s&gt;Contenido de ejemplo&lt;/s&gt;</pre><button class='button copy-btn' data-ex='example-80'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='samp'><td>81</td><td class='tag-name'>&lt;samp&gt;</td><td class='tag-desc'>Elemento &lt;samp&gt;: uso y propósito común.</td><td><pre id='example-81'>&lt;samp&gt;Contenido de ejemplo&lt;/samp&gt;</pre><button class='button copy-btn' data-ex='example-81'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='script'><td>82</td><td class='tag-name'>&lt;script&gt;</td><td class='tag-desc'>Inserta o enlaza código JavaScript.</td><td><pre id='example-82'>&lt;script&gt;console.log(&quot;Hola&quot;)&lt;/script&gt;</pre><button class='button copy-btn' data-ex='example-82'>Copiar ejemplo</button></td><td>Para código externo use src. Puede usar defer o async.</td></tr>
+<tr data-tag='section'><td>83</td><td class='tag-name'>&lt;section&gt;</td><td class='tag-desc'>Elemento &lt;section&gt;: uso y propósito común.</td><td><pre id='example-83'>&lt;section&gt;Contenido de ejemplo&lt;/section&gt;</pre><button class='button copy-btn' data-ex='example-83'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='select'><td>84</td><td class='tag-name'>&lt;select&gt;</td><td class='tag-desc'>Elemento &lt;select&gt;: uso y propósito común.</td><td><pre id='example-84'>&lt;select&gt;Contenido de ejemplo&lt;/select&gt;</pre><button class='button copy-btn' data-ex='example-84'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='small'><td>85</td><td class='tag-name'>&lt;small&gt;</td><td class='tag-desc'>Elemento &lt;small&gt;: uso y propósito común.</td><td><pre id='example-85'>&lt;small&gt;Contenido de ejemplo&lt;/small&gt;</pre><button class='button copy-btn' data-ex='example-85'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='source'><td>86</td><td class='tag-name'>&lt;source&gt;</td><td class='tag-desc'>Elemento HTML vacío/void &lt;source&gt; (no requiere etiqueta de cierre).</td><td><pre id='example-86'>&lt;source /&gt;</pre><button class='button copy-btn' data-ex='example-86'>Copiar ejemplo</button></td><td>Elemento void. Ver atributos específicos.</td></tr>
+<tr data-tag='span'><td>87</td><td class='tag-name'>&lt;span&gt;</td><td class='tag-desc'>Elemento &lt;span&gt;: uso y propósito común.</td><td><pre id='example-87'>&lt;span&gt;Contenido de ejemplo&lt;/span&gt;</pre><button class='button copy-btn' data-ex='example-87'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='strong'><td>88</td><td class='tag-name'>&lt;strong&gt;</td><td class='tag-desc'>Elemento &lt;strong&gt;: uso y propósito común.</td><td><pre id='example-88'>&lt;strong&gt;Contenido de ejemplo&lt;/strong&gt;</pre><button class='button copy-btn' data-ex='example-88'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='style'><td>89</td><td class='tag-name'>&lt;style&gt;</td><td class='tag-desc'>Elemento &lt;style&gt;: uso y propósito común.</td><td><pre id='example-89'>&lt;style&gt;Contenido de ejemplo&lt;/style&gt;</pre><button class='button copy-btn' data-ex='example-89'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='sub'><td>90</td><td class='tag-name'>&lt;sub&gt;</td><td class='tag-desc'>Elemento &lt;sub&gt;: uso y propósito común.</td><td><pre id='example-90'>&lt;sub&gt;Contenido de ejemplo&lt;/sub&gt;</pre><button class='button copy-btn' data-ex='example-90'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='summary'><td>91</td><td class='tag-name'>&lt;summary&gt;</td><td class='tag-desc'>Elemento &lt;summary&gt;: uso y propósito común.</td><td><pre id='example-91'>&lt;summary&gt;Contenido de ejemplo&lt;/summary&gt;</pre><button class='button copy-btn' data-ex='example-91'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='sup'><td>92</td><td class='tag-name'>&lt;sup&gt;</td><td class='tag-desc'>Elemento &lt;sup&gt;: uso y propósito común.</td><td><pre id='example-92'>&lt;sup&gt;Contenido de ejemplo&lt;/sup&gt;</pre><button class='button copy-btn' data-ex='example-92'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='table'><td>93</td><td class='tag-name'>&lt;table&gt;</td><td class='tag-desc'>Elemento &lt;table&gt;: uso y propósito común.</td><td><pre id='example-93'>&lt;table&gt;Contenido de ejemplo&lt;/table&gt;</pre><button class='button copy-btn' data-ex='example-93'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='tbody'><td>94</td><td class='tag-name'>&lt;tbody&gt;</td><td class='tag-desc'>Elemento &lt;tbody&gt;: uso y propósito común.</td><td><pre id='example-94'>&lt;tbody&gt;Contenido de ejemplo&lt;/tbody&gt;</pre><button class='button copy-btn' data-ex='example-94'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='td'><td>95</td><td class='tag-name'>&lt;td&gt;</td><td class='tag-desc'>Elemento &lt;td&gt;: uso y propósito común.</td><td><pre id='example-95'>&lt;td&gt;Contenido de ejemplo&lt;/td&gt;</pre><button class='button copy-btn' data-ex='example-95'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='template'><td>96</td><td class='tag-name'>&lt;template&gt;</td><td class='tag-desc'>Elemento &lt;template&gt;: uso y propósito común.</td><td><pre id='example-96'>&lt;template&gt;Contenido de ejemplo&lt;/template&gt;</pre><button class='button copy-btn' data-ex='example-96'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='textarea'><td>97</td><td class='tag-name'>&lt;textarea&gt;</td><td class='tag-desc'>Elemento &lt;textarea&gt;: uso y propósito común.</td><td><pre id='example-97'>&lt;textarea&gt;Contenido de ejemplo&lt;/textarea&gt;</pre><button class='button copy-btn' data-ex='example-97'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='tfoot'><td>98</td><td class='tag-name'>&lt;tfoot&gt;</td><td class='tag-desc'>Elemento &lt;tfoot&gt;: uso y propósito común.</td><td><pre id='example-98'>&lt;tfoot&gt;Contenido de ejemplo&lt;/tfoot&gt;</pre><button class='button copy-btn' data-ex='example-98'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='th'><td>99</td><td class='tag-name'>&lt;th&gt;</td><td class='tag-desc'>Elemento &lt;th&gt;: uso y propósito común.</td><td><pre id='example-99'>&lt;th&gt;Contenido de ejemplo&lt;/th&gt;</pre><button class='button copy-btn' data-ex='example-99'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='thead'><td>100</td><td class='tag-name'>&lt;thead&gt;</td><td class='tag-desc'>Elemento &lt;thead&gt;: uso y propósito común.</td><td><pre id='example-100'>&lt;thead&gt;Contenido de ejemplo&lt;/thead&gt;</pre><button class='button copy-btn' data-ex='example-100'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='time'><td>101</td><td class='tag-name'>&lt;time&gt;</td><td class='tag-desc'>Elemento &lt;time&gt;: uso y propósito común.</td><td><pre id='example-101'>&lt;time&gt;Contenido de ejemplo&lt;/time&gt;</pre><button class='button copy-btn' data-ex='example-101'>Copiar ejemplo</button></td><td></td></tr>
+<tr data-tag='title'><td>102</td><td class='tag-name'>&lt;title&gt;</td><td class='tag-desc'>Elemento &lt;title&gt;: uso y propósito común.</td><td><pre id='example-102'>&lt;title&gt;Contenido de ejemplo&lt;/title&gt;</pre><button class='button copy-btn' data-ex='example-102'>Copiar ejemplo</button></td><td></td></tr>
+
+</tbody>
+</table>
+
+<script>
+const input=document.getElementById('searchInput');
+const rows=Array.from(document.querySelectorAll('#inventario tbody tr'));
+const resultCount=document.getElementById('resultCount');
+const meaningPanel=document.getElementById('meaningPanel');
+const clearBtn=document.getElementById('clearBtn');
+function updateCount(n){resultCount.textContent=n+' resultado(s)';}
+function normalize(s){return s? s.toString().toLowerCase():'';}
+function doSearch(){
+ const q=normalize(input.value.trim());
+ let visible=0;meaningPanel.innerHTML='';
+ rows.forEach(r=>{
+  const tag=normalize(r.getAttribute('data-tag'));
+  const desc=normalize(r.querySelector('.tag-desc').textContent||'');
+  const example=normalize(r.querySelector('pre').textContent||'');
+  if(!q||tag.includes(q)||desc.includes(q)||example.includes(q)){
+   r.classList.remove('row-hidden');visible++;
+   const descEl=r.querySelector('.tag-desc');
+   if(q) { descEl.innerHTML = descEl.textContent.replace(new RegExp(q,'ig'),m=>'<span class="highlight">'+m+'</span>'); }
+  }else{r.classList.add('row-hidden');}
+ });
+ updateCount(visible);
+ if(q){
+  const exact=rows.find(r=>r.getAttribute('data-tag')===q);
+  if(exact){
+   const name=exact.querySelector('.tag-name').textContent;
+   const meaning=exact.querySelector('.tag-desc').textContent;
+   meaningPanel.innerHTML='<div class="details"><strong>Significado rápido:</strong> <code>'+name+'</code> — '+meaning+'</div>';
+  }
+ }
+}
+input.addEventListener('input',doSearch);
+clearBtn.addEventListener('click',()=>{input.value='';doSearch();input.focus();});
+document.querySelectorAll('.copy-btn').forEach(btn=>{
+ btn.addEventListener('click',()=>{
+  const pre=document.getElementById(btn.getAttribute('data-ex'));
+  const text=pre.textContent;
+  navigator.clipboard.writeText(text).then(()=>{const old = btn.textContent; btn.textContent='Copiado!'; setTimeout(()=>btn.textContent=old,1200);} ).catch(()=>{alert('No se pudo copiar');});
+ });
+});
+doSearch();
+</script>
+</body>
+</html>
+
+ <footer>
+    Hecho en Visual Studio Code con HTML puro. © 2025
+  </footer>
+</body>
+</html>
